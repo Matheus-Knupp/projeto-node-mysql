@@ -1,0 +1,29 @@
+# Dependências
+node_modules/
+
+# Build
+dist/
+build/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Ambiente
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+
+# Uploads (caso você salve arquivos)
+uploads/
+
+# TypeScript
+*.tsbuildinfo
