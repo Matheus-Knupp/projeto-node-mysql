@@ -1,0 +1,15 @@
+<main>
+    {{!-- Conteúdo da página --}}
+    <div class="container">
+        <div class="row">
+            <div class="col-6 offset-3">
+                <form action="/register"method="post" enctype="multipart/form-data">
+                    <input type="text" name="name" class="form-control" placeholder="Nome do produto">
+                    <input type="number" name="price" class="form-control" placeholder="Valor do produto">
+                    <input type="file" name="image" class="form-control">
+                    <input type="submit" class="btn btn-primary" value="Cadastrar">
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
