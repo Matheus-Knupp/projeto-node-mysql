@@ -27,3 +27,8 @@ uploads/
 
 # TypeScript
 *.tsbuildinfo
+
+# Zipados
+.zip
+*.zip
+.zip*
