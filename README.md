@@ -17,10 +17,10 @@ O objetivo é construir uma aplicação web com operações básicas de cadastro
 
 O projeto segue uma estrutura simples, podendo evoluir ao longo do desenvolvimento:
 
-/src
-├── app.ts
-/views
-/public
+/src 
+├── app.ts 
+/views 
+/public 
 
 *(Essa estrutura pode ser refatorada conforme o projeto evolui)*
 
