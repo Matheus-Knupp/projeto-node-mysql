@@ -6,7 +6,7 @@ export const conexao: Connection = mysql.createConnection({
     host:'localhost',
     user:'root',
     password:'123456',
-    database:'igreja'
+    database:'meu_site'
 })
 
 // Teste de conexão

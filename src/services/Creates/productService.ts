@@ -1,6 +1,7 @@
 import { UploadedFile } from 'express-fileupload';
-import { conexao } from '../database/connection';
-import { saveFile } from '../utils/upload';
+import { conexao } from '../../database/connection';
+import { saveFile } from '../../utils/upload';
+import { ResultSetHeader } from 'mysql2';
 
 interface CreateProductDTO {
   name: string;
@@ -9,7 +10,7 @@ interface CreateProductDTO {
 }
 
 export class ProductService {
-  static async create(data: CreateProductDTO): Promise<void> {
+  static async create(data: CreateProductDTO): Promise<{id: number}> {
     const { name, price, image } = data;
 
     // 1. validação
@@ -34,10 +35,11 @@ export class ProductService {
       VALUES (?, ?, ?)
     `;
 
-    await new Promise<void>((resolve, reject) => {
-      conexao.query(sql, [name, price, fileName], (err) => {
+    return new Promise<{id: number}>((resolve, reject) => {
+      conexao.query(sql, [name, price, fileName], (err, result) => {
         if (err) return reject(err);
-        resolve();
+        console.log(result);
+        resolve({id: (result as ResultSetHeader).insertId});
       });
     });
   }
