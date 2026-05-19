@@ -37,7 +37,7 @@ export class ProductController {
     static async listAll(req: Request, res: Response) {
         try {
             const products = await listProductService();
-            return res.render('list', {products});
+            return res.render('form', {products});
         } catch (error) {
             console.error(error);
             return res.status(500).send('Erro ao buscar produtos');

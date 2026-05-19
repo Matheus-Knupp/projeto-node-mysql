@@ -6,3 +6,8 @@
     form input{
         margin-bottom: 10px;
     }
+
+    .product-image{
+        height: 250px;
+        object-fit: contain;
+    }

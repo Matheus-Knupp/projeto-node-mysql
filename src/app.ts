@@ -22,6 +22,9 @@ app.use('/bootstrap', express.static('./node_modules/bootstrap/dist'));
 // Adicionar CSS
 app.use('/css', express.static('./css'))
 
+// Referenciar Imagens no uploads
+app.use('/uploads', express.static('./uploads'));
+
 // Configurar express-handlebars
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');

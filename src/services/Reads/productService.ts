@@ -5,13 +5,14 @@ interface product {
     id: number;
     name: string;
     price: number;
+    image: string;
 }
 
 export default async function listProductService(): Promise<product[]> {
 
     //Define o que será consultado no banco
     const sql = `
-            SELECT id, name, price FROM products
+            SELECT id, name, price, image FROM products
         `;
     
     // Executa a consulta

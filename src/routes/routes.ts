@@ -13,9 +13,7 @@ routes.get('/', function(req:Request, res:Response){
 routes.get('/list_products', ProductController.listAll)
 
 // Rota do Formulario
-routes.get('/form', function(req:Request, res:Response){
-    res.render('form');
-})
+routes.get('/form', ProductController.listAll)
 
 // Rota de Cadastro
 routes.post('/register', ProductController.create);
